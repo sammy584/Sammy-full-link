@@ -1,103 +1,172 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Sammy Store</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#000;
-color:white;
-text-align:center;
+<!DOCTYPE html>  <html>    <head>    
+<title>xx-09-6 OFFICIAL</title>    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<meta charset="UTF-8">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  <style>    
+body{    
+    margin:0;    
+    font-family:Arial, sans-serif;    
+    background:linear-gradient(135deg,#000814,#001d3d,#000814);    
+    background-size:200% 200%;    
+    animation:bgMove 8s ease infinite;    
+    text-align:center;    
+    color:white;    
+    overflow:hidden;    
+}    @keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-/* Loading Screen */
+/* LOADING SCREEN */
 #loadingScreen{
 position:fixed;
-top:0;
-left:0;
 width:100%;
 height:100%;
 background:black;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
-z-index:999;
+flex-direction:column;
+z-index:9999;
 }
 
-video{
+#loadingVideo{
 width:100%;
-max-width:400px;
-border-radius:10px;
+height:100%;
+object-fit:cover;
 }
 
-.skipBtn{
-margin-top:15px;
-padding:10px 20px;
+#tapText{
+position:absolute;
+bottom:80px;
+font-size:20px;
+font-weight:bold;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+#skipBtn{
+position:absolute;
+top:20px;
+right:20px;
+padding:8px 15px;
 background:red;
-border:none;
-color:white;
-font-size:16px;
 border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+color:white;
 }
 
-/* Main Content */
+/* MAIN CONTENT */
 #mainContent{
 display:none;
-padding:20px;
+padding-top:20px;
 }
 
-.contactText a{
-color:#00ffcc;
+.h1main{
+font-size:32px;
+font-weight:bold;
+color:#00b4ff;
+text-shadow:0 0 15px #00b4ff;
+margin-bottom:6px;
+}
+
+.pmain{
+font-size:14px;
+margin-bottom:18px;
+}
+
+/* LINKS */
+.linkBtn{
+display:block;
+background:rgba(10,10,10,0.85);
+color:#00b4ff;
+padding:15px;
+margin:12px auto;
+width:90%;
+max-width:400px;
+border-radius:40px;
 text-decoration:none;
-font-size:18px;
+font-weight:bold;
+transition:0.3s ease;
+border:1px solid rgba(0,180,255,0.5);
+box-shadow:0 0 15px rgba(0,180,255,0.4);
+animation:goyang 2s infinite;
 }
-</style>
 
-</head>
-<body>
+@keyframes goyang{
+0%{transform:rotate(0deg);}
+25%{transform:rotate(1deg);}
+50%{transform:rotate(0deg);}
+75%{transform:rotate(-1deg);}
+100%{transform:rotate(0deg);}
+}
 
-<!-- LOADING VIDEO -->
-<div id="loadingScreen">
+.linkBtn i{
+margin-right:8px;
+}
 
+.linkBtn:hover{
+transform:scale(1.07);
+background:#001d3d;
+}
+
+.footerText{
+margin-top:22px;
+font-size:12px;
+opacity:0.8;
+color:#00b4ff;
+text-shadow:0 0 10px #00b4ff;
+}
+
+.contactText{
+margin-top:18px;
+font-size:14px;
+color:#00b4ff;
+line-height:1.6;
+}
+
+</style>  </head>  <body>  <!-- VIDEO LOADING -->  <div id="loadingScreen">
 <video id="loadingVideo" autoplay muted>
-<source src="intro.mp4" type="video/mp4">
-</video>
+<source src="video.mp4" type="video/mp4">
+</video>  <div id="tapText">Tap untuk masuk</div>
 
-<button class="skipBtn" onclick="skipVideo()">Skip</button>
+<div id="skipBtn" onclick="skipVideo()">SKIP</div>  </div>  <!-- MAIN WEB -->  <div id="mainContent">  <div class="h1main">Developer Sammy store</div>    
+<div class="pmain">xx-09-6</div>    <a class="linkBtn" href="https://instagram.com/senno_store01" target="_blank">    
+<i class="fab fa-instagram"></i>Instagram Sammy    
+</a>    <a class="linkBtn" href="https://www.tiktok.com/@sammystore11" target="_blank">    
+<i class="fab fa-tiktok"></i>TikTok Sammy    
+</a>    <a class="linkBtn" href="https://whatsapp.com/channel/0029Vb7p2tTEKyZQTPbIoD2c" target="_blank">    
+<i class="fab fa-whatsapp"></i>Testimoni Sammy    
+</a>    <a class="linkBtn" href="https://chat.whatsapp.com/JT5RerdK2SW4Sa0fVx1g6C?mode=gi_t" target="_blank">    
+<i class="fab fa-whatsapp"></i>Link GB Sammy    
+</a>    <a class="linkBtn" href="https://wa.me/6283107288718" target="_blank">    
+<i class="fab fa-whatsapp"></i>Chat WhatsApp Sammy    
+</a>    <a class="linkBtn" href="https://sammy584.github.io/sammy-topup/" target="_blank">    
+<i class="fas fa-gem"></i>Link Topup Sammy    
+</a>    <a class="linkBtn" href="https://sammy584.github.io/Sammy-joki/" target="_blank">    
+<i class="fas fa-gamepad"></i>Link Joki Sammy    
+</a>    <div class="footerText">© 2026 xx-09-6 OFFICIAL</div>    <div class="contactText">    
+    jasa pembuatan website topup • joki • mirip link tree <br>    
+    📱 <a href="https://wa.me/6283107288718" target="_blank">083107288718</a> <br>    
+    💬 <a href="https://t.me/sennojasbug" target="_blank">t.me/sennojasbug</a> <br>
+    📧 <a href="mailto:sammystore736@gmail.com">sammystore736@gmail.com</a>    
+</div>  </div>  <script>    
+let video = document.getElementById("loadingVideo");    
+let loading = document.getElementById("loadingScreen");    
+let main = document.getElementById("mainContent");    
 
-</div>
-
-<!-- MAIN WEBSITE -->
-<div id="mainContent">
-
-<h1>Sammy Store</h1>
-
-<div class="contactText">
-💬 <a href="https://t.me/sennojasbug" target="_blank">t.me/sennojasbug</a>
-</div>
-
-</div>
-
-<script>
-
-let video = document.getElementById("loadingVideo");
-let loading = document.getElementById("loadingScreen");
-let main = document.getElementById("mainContent");
-
-/* supaya suara aktif setelah tap */
 document.body.addEventListener("click", function(){
-video.muted=false;
+video.muted = false;
 video.play();
 });
 
-/* jika video selesai */
-video.onended=function(){
+video.onended = function(){
 showMain();
-}
+};
 
 function skipVideo(){
 showMain();
@@ -107,8 +176,6 @@ function showMain(){
 loading.style.display="none";
 main.style.display="block";
 }
+</script>  </body>
 
-</script>
-
-</body>
-</html>
+                           </html>
